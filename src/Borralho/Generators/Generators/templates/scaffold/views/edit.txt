@@ -1,0 +1,33 @@
+@extends('layouts.scaffold')
+
+@section('main')
+
+<div class="uk-grid">
+    <div class="uk-width-1-1">
+        <h1>Edit {{Model}}</h1>
+
+        @if ($errors->any())
+        	<div class="uk-alert uk-alert-danger">
+        	    <ul>
+                    {{ implode('', $errors->all('<li class="error">:message</li>')) }}
+                </ul>
+        	</div>
+        @endif
+    </div>
+</div>
+
+{{ Form::model(${{model}}, array('class' => 'uk-form', 'method' => 'PATCH', 'route' => array('{{models}}.update', ${{model}}->id))) }}
+
+{{formElements}}
+
+<div class="uk-form-row">
+    <label class="uk-form-label">&nbsp;</label>
+    <div class="uk-form-controls">
+      {{ Form::submit('Update', array('class' => 'uk-button-primary')) }}
+      {{ link_to_route('{{models}}.show', 'Cancel', ${{model}}->id, array('class' => 'uk-button')) }}
+    </div>
+</div>
+
+{{ Form::close() }}
+
+@stop

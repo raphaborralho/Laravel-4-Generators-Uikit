@@ -1,7 +1,7 @@
 {
-    "name": "dollar/generators",
-    "description": "Laravel 4 Generators w/ Bootstrap 3",
-    "keywords": ["laravel", "generators", "artisan", "bootstrap", "scaffold"],
+    "name": "borralho/generators",
+    "description": "Laravel 4 Generators w/ Uikit",
+    "keywords": ["laravel", "generators", "artisan", "Uikit", "scaffold"],
     "authors": [
         {
             "name": "Jeffrey Way",
@@ -11,6 +11,11 @@
         {
             "name": "Wes Dollar",
             "email": "github@wesdollar.com",
+            "role": "Contributor"
+        },
+        {
+            "name": "Raphaell Borralho",
+            "email": "raphaborralho@gmail.com",
             "role": "Contributor"
         }
     ],
@@ -26,10 +31,10 @@
     },
     "autoload": {
         "psr-0": {
-            "Dollar\\Generators": "src/"
+            "Borralho\\Generators": "src/"
         },
         "classmap": [
-            "src/Dollar/Generators/Generators"
+            "src/Borralho/Generators/Generators"
         ]
     },
      "extra": {
