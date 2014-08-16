@@ -7,7 +7,7 @@
         <h1>Create {{Model}}</h1>
 
         @if ($errors->any())
-        	<div class="alert alert-danger">
+        	<div class="uk-alert">
         	    <ul>
                     {{ implode('', $errors->all('<li class="error">:message</li>')) }}
                 </ul>
